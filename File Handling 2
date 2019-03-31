@@ -1,0 +1,40 @@
+// FileHandling1.cpp : Defines the entry point for the console application.
+//
+#pragma once
+#include "stdafx.h"
+#include <iostream>
+#include <string> 
+#include <fstream>
+using namespace std;
+
+int _tmain(int argc, _TCHAR* argv[])
+{
+
+	ofstream Infile("Infile1.txt");
+	//cout << "Enter First Name, Surname, Room Type, Menu Type(BreakF.,Lunch, Dinner),Date" << endl;
+	//cout << "Press Ctrl + Z to quit" << endl;
+	string FirstName;
+	string RoomType;
+	string MenuType;
+	//double Date;
+	cout << "Enter First Name"<< endl;
+	cin >> FirstName;
+	cout << "Enter Room Type" << endl;
+	cin >> RoomType;
+	cout << "Enter Menu Type" << endl;
+	cin >> MenuType;
+	while (cin)
+	{
+		Infile << FirstName << '   ' << RoomType << '    ' << MenuType << '   ' << endl;
+	}
+	//cout << "Enter Date" << endl;
+	//cin >> Date;
+	//Infile << FirstName << '   ' << RoomType << '    ' << MenuType << '   ' << endl;
+		// Date << endl;
+	Infile.close();
+
+	
+	
+	
+	return 0;
+}
